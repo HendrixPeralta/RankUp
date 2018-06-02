@@ -37,18 +37,18 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         ModelCompany companyItem = mlist.get(position);
-        ImageView image = holder.itemImage;
+        ImageView image;
         TextView name, address, salaryRank, ambientRank;
 
-
+        image = holder.itemImage;
         name = holder.itemName;
+        address = holder.itemAddress;
         salaryRank = holder.itemSalaryRank;
         ambientRank = holder.itemAmbientRank;
 
         image.setImageResource(companyItem.getImage());
-
         name.setText(companyItem.getName());
-//        address.setText(companyItem.getAddress());
+        address.setText(companyItem.getAddress());
         salaryRank.setText(companyItem.getSalaryRank());
         ambientRank.setText(companyItem.getAmbientRank());
 
